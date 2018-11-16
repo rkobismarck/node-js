@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Simple AppServer",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "RCTT",
+  "license": "ISC"
+}
