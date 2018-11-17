@@ -4,7 +4,8 @@
   "description": "Express demo app.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node src/index.js"
   },
   "author": "RCTT",
   "license": "ISC",
