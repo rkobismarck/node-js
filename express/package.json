@@ -1,0 +1,14 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "Express demo app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "RCTT",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
