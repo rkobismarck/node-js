@@ -32,7 +32,7 @@ MacBook-Pro-de-Roberto:app robertotrujillo$ chmod +x build\&run.sh
 MacBook-Pro-de-Roberto:app robertotrujillo$ ./build\&run.sh
 ```
 4. Now you should be **Up&Running** and see a screen like this one:
-![alt text](https://github.com/rkobismarck/node-js/media-content/docker-nodejs-1.png "Termius")
+![alt text](https://github.com/rkobismarck/node-js/blob/media-content/docker-nodejs-1.png "Docker Container Running")
 
 If you have chosen the second option:
 1. Go to the folder app.
