@@ -4,6 +4,7 @@ const express = require('express');
 const Boom = require('boom')
 const todoRoutes = express.Router();
 const Todo = require("../model/model");
+const responseParser = require("../middleware/responseParser");
 const BASE_URI = "/todos"
 
 todoRoutes.route(BASE_URI)
@@ -12,7 +13,7 @@ todoRoutes.route(BASE_URI)
             if (error) {
                 return res.json(Boom.notFound("No records found."))
             }
-            res.status(200).json(todos);
+            responseParser(req,res, todos);
         })
     })
     .post((req, res) => {
@@ -24,7 +25,7 @@ todoRoutes.route(BASE_URI)
                 if (error) {
                     res.json(Boom.badRequest('Unable to update todo'))
                 }
-                res.status(200).json(todo)
+                responseParser(req,res,todo)
             }
         )
     });
@@ -36,8 +37,7 @@ todoRoutes.route(BASE_URI + "/:id")
             if (error) {
                 return res.json(Boom.notFound("No records found."))
             }
-
-            res.status(200).json(todos);
+            responseParser(req,res,todos)
         })
     })
     .put((req, res) => {
@@ -52,7 +52,7 @@ todoRoutes.route(BASE_URI + "/:id")
                     if (error) {
                         res.json(Boom.badRequest('Unable to update todo'))
                     } else {
-                        res.status(200).json(todo)
+                        responseParser(req,res,todo)
                     }
                 })
             }
@@ -64,7 +64,7 @@ todoRoutes.route(BASE_URI + "/:id")
             if (err) {
                 return res.json(Boom.notFound("No records found."))
             }
-            res.status(200).json("Succesfully removed")
+            responseParser(req,res,"Succesfully removed")
         })
     });
 
